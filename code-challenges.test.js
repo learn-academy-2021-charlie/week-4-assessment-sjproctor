@@ -35,7 +35,7 @@ var colors2 = ["chartreuse", "indigo", "periwinkle", "ochre", "aquamarine", "saf
 
 var nums1 = [3, 56, 90, -8, 0, 23, 6]
 // Expected output: [-8, 90]
-var nums2 = [109, 5, 9, 67 8, 24]
+var nums2 = [109, 5, 9, 67, 8, 24]
 // Expected output: [5, 109]
 
 
