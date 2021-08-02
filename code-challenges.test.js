@@ -94,7 +94,7 @@ describe("noRepeat", () => {
     var testArray1 = [3, 7, 10, 5, 4, 3, 3]
     var testArray2 = [7, 8, 2, 3, 1, 5, 4]
     // Expected output: [3, 7, 10, 5, 4, 8, 2, 1]
-    expect(noRepeat(testArray1, testArray2)).toEqual([3, 7, 10, 5, 4, 8, 2, 1])
+    expect(noRepeat(testArray1, testArray2, [3, 7, 10])).toEqual([3, 7, 10, 5, 4, 8, 2, 1])
   })
 })
 
@@ -119,10 +119,18 @@ describe("noRepeat", () => {
 //   return output
 // }
 
+
+// const noRepeat = (...arrays) => {
+//   const flattenArray = arrays.reduce((acc, value) => {
+//     return acc.concat(value)
+//   }, [])
+//   return flattenArray.filter((value, index, array) => {
+//     return array.indexOf(value) === index
+//   })
+// }
+
 const noRepeat = (...arrays) => {
-  const flattenArray = arrays.reduce((acc, value) => {
-    return acc.concat(value)
-  }, [])
+  const flattenArray = [].concat(...arrays)
   return flattenArray.filter((value, index, array) => {
     return array.indexOf(value) === index
   })
